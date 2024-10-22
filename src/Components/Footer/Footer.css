@@ -1,5 +1,5 @@
 .container{
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: white;
     padding: 40px 40px 10px 40px;
 }
@@ -16,7 +16,7 @@
 }
 
 hr {
-    margin-top: 10px;
+    margin-top: 50px;
     height: 1px;
     border: none;
     background-color: white;
@@ -30,7 +30,7 @@ hr {
 
 .icones {
     display: flex;
-    gap:10px;
+    gap:25px;
 }
 
 .informacoes {
