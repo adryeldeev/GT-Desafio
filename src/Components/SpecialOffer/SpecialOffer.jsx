@@ -1,0 +1,30 @@
+import './SpecialOffer.css'
+
+const SpecialOffter = () => {
+    return (
+        <>
+            <div className='specialOffer'>
+                <div className='conteudo'>
+                    <div>
+                        <div>
+                            <div className='circulo'></div>
+                            <div className='conteiner-imagem'>
+                                <img src="src\assets\sapatosAmarelos.png" alt="Sapatos Air Jodan" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='texto'>
+                        <p className='titulo'>Oferta especial</p>
+                        <h3 className='subtitulo'>Air Jordan edição de 
+                            colecionador</h3>
+                        <p className='texto-oferta'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                        <button>Ver Oferta</button>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default SpecialOffter;
+
