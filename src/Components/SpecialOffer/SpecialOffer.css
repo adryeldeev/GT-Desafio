@@ -34,17 +34,24 @@
     margin-left: 40px;
 }
 
-.conteiner-imagem {
+/* .conteiner-imagem {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     top:75px;
     left: 50px;
+} */
+
+.conteiner-circulo-imagem {
+    position: relative;
 }
 
 img {
     width: 370px;
     transform: translate(-50% -50%);
+    position: absolute;
+    top:25px;
+    left: 0px;
 }
 
 button {

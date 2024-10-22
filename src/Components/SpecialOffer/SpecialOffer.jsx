@@ -6,11 +6,9 @@ const SpecialOffter = () => {
             <div className='specialOffer'>
                 <div className='conteudo'>
                     <div>
-                        <div>
+                        <div className='conteiner-circulo-imagem'>
                             <div className='circulo'></div>
-                            <div className='conteiner-imagem'>
-                                <img src="src\assets\sapatosAmarelos.png" alt="Sapatos Air Jodan" />
-                            </div>
+                            <img src="src\assets\sapatosAmarelos.png" alt="Sapatos Air Jodan" />
                         </div>
                     </div>
                     <div className='texto'>
