@@ -1,7 +1,12 @@
 import React from "react";
-
+import './Home.css'
+import Slide from "../../Components/Slide/Slide";
 const Home = () => {
-  return <div>Home</div>;
+  return (
+   <>
+   <Slide/>
+   </>
+  );
 };
 
 export default Home;

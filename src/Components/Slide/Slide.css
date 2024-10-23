@@ -1,0 +1,95 @@
+.swiper {
+  width: 80%;
+  height: 80%;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.slide-container {
+  width: 100%;
+  height: 100%;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-content-left {
+  width: 50%;
+}
+
+.slide-content-left-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-offer {
+  color: #FFA500; 
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  text-align: left;
+  max-width: 300px;
+}
+
+.description {
+  font-size: 16px;
+  color: #7d7d7d;
+  margin-top: 10px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.offer-button {
+  background-color: #ff007f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 350px;
+  margin-top: 20px;
+  
+}
+
+.offer-button:hover {
+  background-color: #ff3399;
+}
+
+/* Seção da imagem */
+.slide-content-right {
+  width: 50%;
+  text-align: right;
+}
+
+.TenisSlide {
+  width: 90%;
+  max-width: 400px;
+}
+.slide-content-bolha{
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
