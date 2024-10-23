@@ -3,13 +3,20 @@ import './Slide.css';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react'; 
+<<<<<<< HEAD
 import { Pagination } from 'swiper/modules'
 import IMGTenis from "../../assets/tenis.png"
 import Bolha from '../../assets/Ornament.png'
+=======
+import { Pagination } from 'swiper/modules';
+import IMGTenis from '../../assets/img/Tenis.png'
+import IMGBola from '../../assets/img/Ornament.png'
+>>>>>>> 7769f09 (atualizando slide)
 
 const Slide = () => {
   return (
     <>
+<<<<<<< HEAD
 <Swiper
   pagination={ {clickable: true} }
   modules={[Pagination]}
@@ -17,6 +24,15 @@ const Slide = () => {
 >
   <SwiperSlide>
     <div className="slide-container">
+=======
+      <Swiper
+        pagination={ { clickable: true }} 
+        modules={[Pagination]} 
+        className="mySwiper"
+      >
+        <SwiperSlide>
+        <div className="slide-container">
+>>>>>>> 7769f09 (atualizando slide)
       <div className="slide-content">
         <div className="slide-content-left">
           <div className="slide-content-left-itens">
@@ -32,6 +48,7 @@ const Slide = () => {
           </div>
         </div>
         <div className="slide-content-right">
+<<<<<<< HEAD
         <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
         </div>
       </div>
@@ -42,6 +59,17 @@ const Slide = () => {
   </SwiperSlide>
   <SwiperSlide>
   <div className="slide-container">
+=======
+          <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
+        </div>
+      </div>
+      <div className="content-ornament">
+        <img className="ornament" src={IMGBola} alt="" />
+      </div>
+    </div>
+  </SwiperSlide>
+        <SwiperSlide>   <div className="slide-container">
+>>>>>>> 7769f09 (atualizando slide)
       <div className="slide-content">
         <div className="slide-content-left">
           <div className="slide-content-left-itens">
@@ -57,6 +85,7 @@ const Slide = () => {
           </div>
         </div>
         <div className="slide-content-right">
+<<<<<<< HEAD
         <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
         </div>
       </div>
@@ -67,6 +96,16 @@ const Slide = () => {
   </SwiperSlide>
   <SwiperSlide>
   <div className="slide-container">
+=======
+          <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
+        </div>
+      </div>
+        <div className="content-ornament">
+        <img className="ornament" src={IMGBola} alt="" />
+      </div>
+    </div></SwiperSlide>
+        <SwiperSlide>   <div className="slide-container">
+>>>>>>> 7769f09 (atualizando slide)
       <div className="slide-content">
         <div className="slide-content-left">
           <div className="slide-content-left-itens">
@@ -82,6 +121,7 @@ const Slide = () => {
           </div>
         </div>
         <div className="slide-content-right">
+<<<<<<< HEAD
         <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
         </div>
       </div>
@@ -96,3 +136,19 @@ const Slide = () => {
 }
 
 export default Slide
+=======
+          <img className="TenisSlide" src={IMGTenis} alt="imagem do tênis da nike" />
+        </div>
+      </div>
+      <div className="content-ornament">
+        <img className="ornament" src={IMGBola} alt="" />
+      </div>
+    </div>
+    </SwiperSlide>
+      </Swiper>
+    </>
+  );
+}
+
+export default Slide;
+>>>>>>> 7769f09 (atualizando slide)

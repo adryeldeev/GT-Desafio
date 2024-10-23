@@ -8,8 +8,8 @@
   flex-grow: 1; 
   padding: 20px;
   display: flex;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
   min-height: 70vh; 
   box-sizing: border-box;
   width: 100%;
