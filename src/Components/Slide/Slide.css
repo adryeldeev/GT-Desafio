@@ -113,6 +113,7 @@
   padding: 40px 60px;
   background-color: #2222;
   position: relative;
+  margin-top: 30px;
 }
 
 .slide-content {
@@ -183,14 +184,13 @@ margin-right: 155px;
 }
 
 .TenisSlide {
-  width: 90%;
   max-width: 400px;
 }
-.content-ornament{
+.slide-content-bolha{
   position: absolute;
   top:50px;
   right: 0;
 }
-.content-ornament .ornament{
-  width: 80%;
+.slide-content-bolha .bolha{
+  width: 60%;
 }
