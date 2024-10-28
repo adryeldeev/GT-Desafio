@@ -7,11 +7,9 @@ import { Pagination } from 'swiper/modules'
 import IMGTenis from "../../assets/tenis.png"
 import Bolha from '../../assets/Ornament.png'
 
-
 const Slide = () => {
   return (
     <>
-
 <Swiper
   pagination={ {clickable: true} }
   modules={[Pagination]}
@@ -92,8 +90,6 @@ const Slide = () => {
         </div>
     </div>
   </SwiperSlide>
-
-
 </Swiper>
 </>
   )
