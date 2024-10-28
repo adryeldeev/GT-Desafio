@@ -1,0 +1,24 @@
+.conteiner_colecao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.content_colecoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_colecoes .content_colecoes_itens{
+    display: flex;
+}
+.content_colecoes .content_colecoes_itens .img_colecoes{
+    max-width: 120px;
+    cursor: pointer;
+}
+.content_colecoes .content_colecoes_itens .img_colecoes:hover{
+    color:  #ff007f;
+}
