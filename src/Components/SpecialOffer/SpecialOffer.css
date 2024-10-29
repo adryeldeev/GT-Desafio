@@ -1,5 +1,6 @@
 .specialOffer {
-    padding: 20px;
+    padding: 100px;
+    margin-bottom: -120px;
 } 
 
 
@@ -15,7 +16,7 @@
     gap: 20px;
 }
 
-.titulo{
+.titulo-oferta-especial{
     font-size: 12px;
     color: rgba(201, 32, 113, 1);
 }
@@ -46,7 +47,7 @@
     position: relative;
 }
 
-img {
+.img-sapato {
     width: 370px;
     transform: translate(-50% -50%);
     position: absolute;
@@ -54,7 +55,7 @@ img {
     left: 0px;
 }
 
-button {
+.botao-ver-oferta {
     width: 120px;
     height: 25px;
     font-size: 12px;

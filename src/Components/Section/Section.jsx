@@ -3,7 +3,7 @@ import './Section.css'
 const Section = () => {
     return ( 
         <>
-            <div className='titulo'>
+            <div className='titulo-colecoes-em-destatque'>
                 <h2 >Coleções em destaque</h2>
             </div>
             
