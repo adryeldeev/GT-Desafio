@@ -1,0 +1,64 @@
+.titulo-colecoes-em-destatque {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    color: rgba(71, 71, 71, 1);
+}
+
+.container-cards{
+    display: flex;
+    gap: 10px;
+}
+
+.container-card {
+    width: 330px;
+    height: 200px;
+    border-radius: 5px;
+    flex: 1;
+    background-color: rgba(216, 227, 242, 1);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 200px; 
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.primeiro-card{
+    background-image: url('..\..\..\src\assets\camisaStarWars.png');
+}
+
+.segundo-card{
+    background-image: url('..\..\..\src\assets\ddd1.png');
+}
+
+.terceiro-card{
+    background-image: url('..\..\..\src\assets\headset.png');
+}
+
+.desconto {
+    width: 70px;
+    background-color: rgba(231, 255, 134, 1);
+    font-size: 13px;
+    color: rgba(71, 71, 71, 1);
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+.produto {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    width: 150px;
+    color: rgba(31, 31, 31, 1);
+}
+
+.botao {
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 8px 30px;
+    color: rgba(201, 32, 113, 1);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
