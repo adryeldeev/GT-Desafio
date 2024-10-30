@@ -60,11 +60,15 @@
     height: 25px;
     font-size: 12px;
     color: white;
-    background-color: rgba(201, 32, 113, 1);
+    background-color: #C92071;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
+.botao-ver-oferta:hover {
+    opacity: 0.9;
+}
 .texto-oferta {
     color: rgba(71, 71, 71, 1);
 }

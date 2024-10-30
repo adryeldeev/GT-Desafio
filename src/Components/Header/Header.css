@@ -10,7 +10,7 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding:20px 30px;
+    padding:20px 30px; 
 }
 .content-header-info{
     display: flex;
@@ -24,13 +24,14 @@
     padding: 5px 20px;
 }
 .input_search input {
-    width: 500px;
+    width: 400px;
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
     padding-left: 40px; 
     font-size: 16px;
     outline: none;
+    background-color: rgba(245, 245, 245, 1);
 }
 
 .input_icon {
@@ -39,7 +40,7 @@
     top: 50%;
     transform: translateY(-50%);
     color: #999;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .content-header .button-cadastrese {
@@ -62,6 +63,38 @@
     border-radius: 0.30rem;
     cursor: pointer;
 }
+
+.content-header .button-entrar:hover{
+    opacity: 0.8;
+}
+
+.carrinho {
+    margin: 8px 0px 8px 70px;
+    /* margin-left: 70px; */
+    position: relative;
+    cursor: pointer;
+}
+
+.imgCarrinho{
+    width: 24px;
+}
+
+.circuloCarrinho {
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #C92071;
+    color: white;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
 .content-nav {
     width: 100%;
     height: auto;

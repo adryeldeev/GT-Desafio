@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Logo from "../../assets/img/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import "./Header.css";
@@ -25,6 +25,10 @@ const Header = () => {
               <u>Cadastre-se</u>
             </button>
             <button className="button-entrar">Entrar</button>
+          </div>
+          <div className="carrinho">
+            <img className="imgCarrinho" src="src\assets\carrinho.svg" alt="" />
+            <div className="circuloCarrinho">2</div>
           </div>
         </div>
       </div>

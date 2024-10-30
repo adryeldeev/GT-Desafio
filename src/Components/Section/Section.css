@@ -12,7 +12,7 @@
 }
 
 .container-card {
-    width: 330px;
+    width: 338px;
     height: 200px;
     border-radius: 5px;
     flex: 1;
@@ -39,7 +39,7 @@
 .desconto {
     width: 70px;
     background-color: rgba(231, 255, 134, 1);
-    font-size: 13px;
+    font-size: 12px;
     color: rgba(71, 71, 71, 1);
     border-radius: 10px;
     padding: 4px 8px;
@@ -47,7 +47,7 @@
 
 .produto {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 700;
     width: 150px;
     color: rgba(31, 31, 31, 1);
@@ -61,4 +61,5 @@
     font-weight: 700;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
