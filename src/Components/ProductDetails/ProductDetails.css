@@ -1,0 +1,121 @@
+.product-container{
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+
+}
+.product-description{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+}
+
+.product-price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: 8px;;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 100%;
+}
+.product-info-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+
+.original-price {
+    color: #8F8F8F;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.product-header {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+.view-all {
+    color: #C92071;
+    display: flex;
+    align-items: center; 
+}
+
+.view-all p {
+    font-size: 12px; 
+    margin: 0; 
+    margin-right: 5px; 
+}
+
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    width: 90%;
+}
+
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.product-card {
+    position: relative;
+    width: 250px; /* Ajuste de largura do cartão */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #D3D3D3;
+}
+
+.product-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #E7FF86;
+    color: #474747;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.discounted-price {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
