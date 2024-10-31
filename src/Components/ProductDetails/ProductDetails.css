@@ -13,7 +13,7 @@
 .product-title {
     font-size: 12px;
     font-weight: bold;
-    color: #333;
+    color: #ccc;
     margin-top: 10px;
 }
 
@@ -24,7 +24,7 @@
 
 .product-price {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: baseline;
     gap: 5px;
     margin-top: 8px;;
@@ -63,6 +63,14 @@
     color: #C92071;
     display: flex;
     align-items: center; 
+    text-align: center;
+    cursor: pointer;
+}
+.view-all:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+.view-all img:hover{
+    filter: hue-rotate(300deg) brightness(1.2) contrast(1.2);
 }
 
 .view-all p {
@@ -84,23 +92,25 @@
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
+    margin-top: 40px;   
+    gap: 20px; 
+    text-align: start;
 }
 
 .product-card {
     position: relative;
-    width: 250px; /* Ajuste de largura do cartão */
+    width: 250px;
     padding: 15px;
-    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: start;
+    cursor: pointer;
 }
 
 .product-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    background-color: #D3D3D3;
+    background-color:rgba(184, 181, 181, 0.09);
 }
 
 .product-discount {
@@ -112,10 +122,10 @@
     padding: 5px 10px;
     border-radius: 12px;
     font-size: 14px;
-    font-weight: bold;
 }
 .discounted-price {
     color: #000;
     font-size: 18px;
     font-weight: bold;
+    text-align: start;
 }
