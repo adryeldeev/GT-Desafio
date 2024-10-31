@@ -1,0 +1,13 @@
+.sidebar {
+  height: 100%;  
+    width: 300px;
+    padding: 20px;
+  }
+  .select-filtro-mark{
+    display: flex;
+    flex-direction: column;
+  }
+  .barra{
+    border-top: 1px solid #ccc;
+    width:100%;
+  }

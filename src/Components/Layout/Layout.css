@@ -15,3 +15,14 @@
   box-sizing: border-box;
   width: 100%;
 }
+.sidebar{
+  flex-grow: 1; 
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; 
+  box-sizing: border-box;
+  width: 100%;
+}

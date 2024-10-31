@@ -3,8 +3,15 @@ import Logo from "../../assets/img/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({onSearchChange}) => {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setSearchValue(e.target.value);
+    onSearchChange(e.target.value); 
+  };
   return (
     <header className="container-header">
       <div className="content-header">
@@ -14,7 +21,7 @@ const Header = () => {
           </a>
           <div className="header-input-info">
             <div className="input_search">
-              <input type="text" placeholder="Pesquise produto..." />
+              <input type="text" placeholder="Pesquise produto..."value={searchValue} onChange={handleInputChange} />
               <div className="input_icon">
                 <CiSearch className="icon" />
               </div>
