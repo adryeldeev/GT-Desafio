@@ -83,6 +83,8 @@ const ProductCard = () => {
   
   const handleBrandFilter = (brand) => {
     setSelectedBrand(brand);
+    setSearchTerm(brand);
+    setSearchTerm(""); // Reset search term when brand filter is applied
   };
  
   const filteredProducts = products.filter((product) => {
