@@ -1,46 +1,117 @@
 import React, { useState } from 'react';
-
-import './ProductListingStyle.jsx'
-import { CardContainer } from './ProductListingStyle.jsx';
-import { ImageContainer } from './ProductListingStyle.jsx';
-import { DetailsContainer } from './ProductListingStyle.jsx';
-import { Category } from './ProductListingStyle.jsx';
-import { Title } from './ProductListingStyle.jsx';
-import { Rating } from './ProductListingStyle.jsx';
-import { Price } from './ProductListingStyle.jsx';
-import { Description } from './ProductListingStyle.jsx';
-import { SizeSelector } from './ProductListingStyle.jsx';
-import { SizeOption } from './ProductListingStyle.jsx';
-import { ColorSelector } from './ProductListingStyle.jsx';
-import { ColorOption } from './ProductListingStyle.jsx';
-import { BuyButton } from './ProductListingStyle.jsx';
+import './ProductListingStyle.jsx';
+import { CardContainer, ImageContainer, DetailsContainer, Category, Title, Rating, Price, Description, SizeSelector, SizeOption, ColorSelector, ColorOption, BuyButton } from './ProductListingStyle.jsx';
+import IMGLayer from '../../assets/Layer.png';
+import { useParams } from 'react-router-dom';
 
 const ProductListing = () => {
+  const { id } = useParams();
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
 
-  const sizes = [39, 40, 41, 42, 43];
+const productsData = [
+  {
+    id:1,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+  brand: "Adidas",
+  sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:2,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+  brand: "Nike",
+  sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:3,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+  brand: "K-Swiss",
+  sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:4,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+  brand: "Adidas",
+  sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:5,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+   brand: "Nike",
+   sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:6,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+   brand: "K-Swiss",
+   sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:7,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+   brand: "Adidas",
+   sizes: [39, 40, 41, 42, 43], 
+},
+{
+    id:8,
+  title: 'Tênis',
+  descricao: 'K-Swiss V8 - Masculino',
+  preco: 200,
+  desconto: 140,
+  imagem: IMGLayer,
+ brand: "Nike",
+ sizes: [39, 40, 41, 42, 43], 
+},
+]
+
+  const productData = productsData.find(product => product.id === parseInt(id))
+    
+
   const colors = ['#4AD9D9', '#888888', '#333333', '#D9D9D9'];
 
   return (
     <CardContainer>
       <ImageContainer>
-        <img src="https://via.placeholder.com/300" alt="Product" />
+        <img src={productData.imagem} alt="Product" />
       </ImageContainer>
       <DetailsContainer>
-        <Category>Casual | Nike</Category>
-        <Title>Tênis Nike Revolution 6 Next Nature Masculino</Title>
-        <Rating>
-          ⭐ 4.7 (90 avaliações)
-        </Rating>
+        <Category>Casual | {productData.brand}</Category>
+        <Title>{productData.title}</Title>
+        <Rating>⭐ 4.7 (90 avaliações)</Rating>
         <Price>
-          R$ 219,00 <span>219,90</span>
+          R$ {productData.preco},00 <span>{productData.desconto},90</span>
         </Price>
-        <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </Description>
+        <Description>{productData.descricao}</Description>
         <SizeSelector>
-          {sizes.map(size => (
+          {productData.sizes.map((size) => (
             <SizeOption
               key={size}
               selected={selectedSize === size}

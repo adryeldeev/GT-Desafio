@@ -2,6 +2,7 @@ import React from 'react';
 import './ProductDetails.css';
 import IMGLayer from '../../assets/Layer.png';
 import Arrow from '../../assets/Line.png';
+import { NavLink } from 'react-router-dom';
 
 const ProductDetails = () => {
   let cards = [
@@ -69,9 +70,11 @@ const ProductDetails = () => {
         <div className="product-header">
           <p>Produtos em alta</p>
           <div className="view-all">
-            <p>Ver todos
-               </p>
+            <NavLink to='/produto' className='navlink'>
+                  Ver todos
+              
             <img src={Arrow} alt="" />
+            </NavLink>
           </div>
         </div>
         <div className="product-gallery">

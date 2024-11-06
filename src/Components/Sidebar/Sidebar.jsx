@@ -1,5 +1,4 @@
 // Sidebar.js
-import React from "react";
 import './SidebarStyle.css'
 const Sidebar = ({ onFilterChange }) => {
   return (

@@ -91,8 +91,8 @@ export const ColorSelector = styled.div`
 export const ColorOption = styled.button`
   width: 30px;
   height: 30px;
-  background: ${({ color }) => color};
-  border: ${({ selected }) => (selected ? '2px solid #333' : '1px solid #ddd')};
+  background-color: ${( props ) => props.color};
+  border: ${( props ) => (props.selected ? '2px solid #333' : '1px solid #ddd')};
   border-radius: 50%;
   cursor: pointer;
 

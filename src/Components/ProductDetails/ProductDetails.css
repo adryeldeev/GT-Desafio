@@ -69,9 +69,7 @@
 .view-all:hover{
     color: rgba(0, 0, 0, 0.5);
 }
-.view-all img:hover{
-    filter: hue-rotate(300deg) brightness(1.2) contrast(1.2);
-}
+
 
 .view-all p {
     font-size: 12px; 
@@ -128,4 +126,9 @@
     font-size: 18px;
     font-weight: bold;
     text-align: start;
+}
+.navlink{
+    text-decoration: none;
+    color: #C92071;
+
 }
