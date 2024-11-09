@@ -75,103 +75,30 @@ let productsData = [
       desconto: 140,
       imagem: IMGLayer,
      brand: "Nike"
-    },  {
-        id:1,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-      brand: "Adidas"
-    },
-    {
-        id:2,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-      brand: "Nike"
-    },
-    {
-        id:3,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-      brand: "K-Swiss"
-    },
-    {
-        id:4,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-      brand: "Adidas",
-    },
-    {
-        id:5,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-       brand: "Nike"
-    },
-    {
-        id:6,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-       brand: "K-Swiss"
-    },
-    {
-        id:7,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-       brand: "Adidas"
-    },
-    {
-        id:8,
-      title: 'Tênis',
-      descricao: 'K-Swiss V8 - Masculino',
-      preco: 200,
-      desconto: 140,
-      imagem: IMGLayer,
-     brand: "Nike"
-    },
+    },  
   ];
 const ProductCard = () => {
   const [products, setProducts] = useState(productsData); 
   const [selectedBrand, setSelectedBrand] = useState(""); 
-  const [searchTerm, setSearchTerm] = useState("")
+ 
   
   const handleBrandFilter = (brand) => {
     setSelectedBrand(brand);
+
    
   };
  
   const filteredProducts = products.filter((product) => {
     const matchesBrand = selectedBrand ? product.brand === selectedBrand : true;
-    const matchesSearch = searchTerm
-      ? product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.descricao.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.brand.toLowerCase().includes(searchTerm.toLowerCase()) : true;
-    return matchesBrand && matchesSearch;
+   
+    return matchesBrand;
   });
   return (
-    <div className="container-produto"  style={{ display: "flex" }}>
+    <div className="container-produto"  style={{ display: "flex"}}>
       <Sidebar onFilterChange={handleBrandFilter} />
-      <div className="product-gallery">
+      <div className="product-gallery" style={{maxWidth:'900px'}}>
           {filteredProducts.map((product, index) => (
-            <NavLink to={`/produto/${product.id}`} className="product-card" key={product.id}>
+            <NavLink to={`/produto/${product.id}`} className="product-card" style={{textDecoration:'none', color:'#000'}} key={index}>
              {index < 2 && 
              (
               <div className="product-discount">

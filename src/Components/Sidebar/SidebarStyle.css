@@ -6,6 +6,7 @@
   .select-filtro-mark{
     display: flex;
     flex-direction: column;
+    
   }
   .barra{
     border-top: 1px solid #ccc;

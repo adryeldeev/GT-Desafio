@@ -97,6 +97,9 @@ const productsData = [
 
   const colors = ['#4AD9D9', '#888888', '#333333', '#D9D9D9'];
 
+  if(!productData){
+    return <div>Não tem produto!</div>
+  }
   return (
     <CardContainer>
       <ImageContainer>
