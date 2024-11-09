@@ -1,4 +1,3 @@
-// import React from "react";
 import Logo from "../../assets/img/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import "./Header.css";

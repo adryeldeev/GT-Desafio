@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: blueviolet;
 }
 
 .select-filtro-mark {
@@ -56,3 +55,4 @@
   align-items: center;
   margin-top: 10px;
 }
+
