@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
   display: flex;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
   gap: 20px;
@@ -144,8 +144,67 @@ export const BuyButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   margin-top: 20px;
+  width:40%;
 
   &:hover {
     background-color: #d99934;
   }
-`;
+    
+`
+export const ProductContainer = styled.div`
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    width: 90%;
+`
+export const ProductHeader = styled.div`
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -20px;
+`
+export const ProductGallery = styled.div`
+display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  gap: 20px; /* Espaço entre os itens */
+  margin-top: 40px;
+  max-width: 1200px; /* Limita a largura total */
+  margin-left: auto;
+  margin-right: auto; /* Garante alinhamento central */
+  text-align: center; /* Ajusta o alinhamento do texto */
+;
+`
+export const ProductCard = styled.div`
+ position: relative;
+  width: 250px; /* Tamanho fixo */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center; /* Centraliza o texto */
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Para melhorar a aparência */
+  background: #fff; /* Fundo branco */
+`
+
+export const ProductImage = styled.img`
+ width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background-color:rgba(184, 181, 181, 0.09);
+`
+
+export const ProducDiscont = styled.div`
+ position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #E7FF86;
+    color: #474747;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+`
+
+

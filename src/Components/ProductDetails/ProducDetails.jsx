@@ -1,4 +1,3 @@
-import React from 'react';
 import './ProductDetails.css';
 import IMGLayer from '../../assets/Layer.png';
 import Arrow from '../../assets/Line.png';
@@ -96,6 +95,7 @@ const ProductDetails = () => {
             </div>
           ))}
         </div>
+
       </div>
     </>
   );

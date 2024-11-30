@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './ProductListingStyle.jsx';
-import { CardContainer, ImageContainer, DetailsContainer, Category, Title, Rating, Price, Description, SizeSelector, SizeOption, ColorSelector, ColorOption, BuyButton, SubTiles, ProductImageContainer, ProductImagensOptions } from './ProductListingStyle.jsx';
+import Arrow from '../../assets/Line.png';
+import { CardContainer, ImageContainer, DetailsContainer, Category, Title, Rating, Price, Description, SizeSelector, SizeOption, ColorSelector, ColorOption, BuyButton, SubTiles, ProductImageContainer, ProductImagensOptions, ProductGallery, ProductCard, ProducDiscont, ProductImage, ProductContainer, ProductHeader } from './ProductListingStyle.jsx';
 import IMGLayer from '../../assets/Layer.png';
 import IMGSnakers from '../../assets/Sneakers.png';
-import { useParams } from 'react-router-dom';
+import IMGTenis from '../../assets/tenis.png'
+import { NavLink, useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -22,6 +24,7 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGSnakers, IMGSnakers, IMGSnakers],
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43],
     colors: [
@@ -40,6 +43,7 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
 },
@@ -51,9 +55,10 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
-},
+  },
 {
     id:4,
     title: 'Tênis',
@@ -62,10 +67,11 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43],  
-},
-{
+  },
+  {
     id:5,
     title: 'Tênis',
     descricao: 'K-Swiss V8 - Masculino',
@@ -73,10 +79,11 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
-},
-{
+  },
+  {
     id:6,
     title: 'Tênis',
     descricao: 'K-Swiss V8 - Masculino',
@@ -84,10 +91,11 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
-},
-{
+  },
+  {
     id:7,
     title: 'Tênis',
     descricao: 'K-Swiss V8 - Masculino',
@@ -95,10 +103,11 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
-},
-{
+  },
+  {
     id:8,
     title: 'Tênis',
     descricao: 'K-Swiss V8 - Masculino',
@@ -106,6 +115,7 @@ const productsData = [
     desconto: 140,
     descricao: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facere ipsum illo explicabo eius animi repellat quaerat maiores quis suscipit!',
     imagem: [IMGLayer, IMGLayer, IMGLayer], // Array de imagens
+    imagem2:[IMGTenis ],
     brand: "Adidas",
     sizes: [39, 40, 41, 42, 43], 
 },
@@ -177,6 +187,53 @@ const productsData = [
         </ColorSelector>
         <BuyButton>COMPRAR</BuyButton>
       </DetailsContainer>
+      <>
+      <ProductContainer>
+        <ProductHeader>
+          <p>Produtos em alta</p>
+          <div className="view-all">
+            <NavLink to='/produto' className='navlink'>
+              Ver todos
+            <img src={Arrow} alt="" />
+            </NavLink>
+          </div>
+        </ProductHeader>
+        <ProductGallery>
+  {productsData
+    .filter((product, index) => {
+      // Primeiros dois produtos com desconto
+      if (index < 2 && product.desconto) return true;
+
+      // Próximos dois produtos sem desconto
+      if (index >= 2 && index < 4 && !product.desconto) return true;
+
+      return false;
+    })
+    .map((item, index) => (
+      <ProductCard key={index}>
+        {item.desconto && (
+          <ProducDiscont>
+            {((item.preco - item.desconto) / item.preco * 100).toFixed(0)}% OFF
+          </ProducDiscont>
+        )}
+        <ProductImage src={item.imagem2[0]} alt={item.title} />
+        <p className="product-title">{item.title}</p>
+        <div className="product-price">
+          {item.desconto ? (
+            <>
+              <span className="original-price">R$ {item.preco.toFixed(2)}</span>
+              <span className="discounted-price">R$ {item.desconto.toFixed(2)}</span>
+            </>
+          ) : (
+            <span className="normal-price">R$ {item.preco.toFixed(2)}</span>
+          )}
+        </div>
+      </ProductCard>
+    ))}
+</ProductGallery>
+        
+      </ProductContainer>
+    </>
     </CardContainer>
   );
 };
