@@ -122,7 +122,7 @@ const productsData = [
 ]
 
   const productData = productsData.find(product => product.id === parseInt(id))
-   
+  const displayedProducts = productsData.slice(0, 4);
 
   const handleColor = (color)=>{
     setSelectedColor(color.colorCode)
@@ -199,38 +199,32 @@ const productsData = [
           </div>
         </ProductHeader>
         <ProductGallery>
-  {productsData
-    .filter((product, index) => {
-      // Primeiros dois produtos com desconto
-      if (index < 2 && product.desconto) return true;
-
-      // Próximos dois produtos sem desconto
-      if (index >= 2 && index < 4 && !product.desconto) return true;
-
-      return false;
-    })
-    .map((item, index) => (
-      <ProductCard key={index}>
-        {item.desconto && (
-          <ProducDiscont>
-            {((item.preco - item.desconto) / item.preco * 100).toFixed(0)}% OFF
-          </ProducDiscont>
-        )}
-        <ProductImage src={item.imagem2[0]} alt={item.title} />
-        <p className="product-title">{item.title}</p>
-        <div className="product-price">
-          {item.desconto ? (
-            <>
-              <span className="original-price">R$ {item.preco.toFixed(2)}</span>
-              <span className="discounted-price">R$ {item.desconto.toFixed(2)}</span>
-            </>
-          ) : (
-            <span className="normal-price">R$ {item.preco.toFixed(2)}</span>
+      {displayedProducts.map((item, index) => (
+        <ProductCard key={index}>
+          {index < 2 && (
+            <ProducDiscont>
+              {((1 - item.desconto / item.preco) * 100).toFixed(0)}% OFF
+            </ProducDiscont>
           )}
-        </div>
-      </ProductCard>
-    ))}
-</ProductGallery>
+          <ProductImage src={item.imagem2[0]} alt={item.title} />
+          <p className="product-title">{item.title}</p>
+          <div className="product-price">
+            {item.desconto ? (
+              <>
+                <span className="original-price">R$ {item.preco.toFixed(2)}</span>
+                <span className="discounted-price">R$ {item.desconto.toFixed(2)}</span>
+              </>
+            ) : (
+              <span className="normal-price">R$ {item.preco.toFixed(2)}</span>
+            )}
+          </div>
+        </ProductCard>
+      ))}
+    </ProductGallery>
+
+
+
+
         
       </ProductContainer>
     </>

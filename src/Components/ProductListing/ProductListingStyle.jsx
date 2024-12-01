@@ -167,15 +167,10 @@ export const ProductHeader = styled.div`
     margin-bottom: -20px;
 `
 export const ProductGallery = styled.div`
-display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Garante 4 itens por linha */
   gap: 20px; /* Espaço entre os itens */
-  margin-top: 40px;
-  max-width: 1200px; /* Limita a largura total */
-  margin-left: auto;
-  margin-right: auto; /* Garante alinhamento central */
-  text-align: center; /* Ajusta o alinhamento do texto */
+  margin-top: 20px;
 ;
 `
 export const ProductCard = styled.div`
