@@ -89,14 +89,25 @@ const ProductCard = () => {
   };
  
   const filteredProducts = products.filter((product) => {
-    const matchesBrand = selectedBrand ? product.brand === selectedBrand : true;
-   
-    return matchesBrand;
+    // Se nenhuma marca for selecionada, retorna todos os produtos
+    if (!selectedBrand || selectedBrand === "0") {
+      return true; 
+    }
+
+    // Retorna apenas os produtos que correspondem à marca selecionada
+    return product.brand === selectedBrand;
   });
+
+  // Verifica se não há produtos para a marca selecionada
+  if (filteredProducts.length === 0) {
+    return <div>Não tem produto!</div>;
+  }
+  
   return (
     <div className="container-produto"  style={{ display: "flex"}}>
       <Sidebar onFilterChange={handleBrandFilter} />
       <div className="product-gallery" style={{maxWidth:'900px'}}>
+        
           {filteredProducts.map((product, index) => (
             <NavLink to={`/produto/${product.id}`} className="product-card" style={{textDecoration:'none', color:'#000'}} key={index}>
              {index < 2 && 

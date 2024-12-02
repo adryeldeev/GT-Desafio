@@ -1,13 +1,56 @@
 .sidebar {
   height: 100%;  
-    max-width: 120px;
-    padding: 10px;
-  }
-  .select-filtro-mark{
-    display: flex;
-    flex-direction: column;
-  }
-  .barra{
-    border-top: 1px solid #ccc;
-    width:100%;
-  }
+  max-width: 120px;
+  padding: 10px;
+}
+
+.select-filtro-mark {
+  display: flex;
+  flex-direction: column;
+}
+
+.barra {
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.contener-categoria-filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-filtro {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type='checkbox']{
+  margin-right:2px;
+}
+
+
+.input-checkbox-filtro[type='radio'] {
+  border-radius: 50%; /* Deixa os radios circulares */
+}
+
+
+.input-checkbox-filtro:checked {
+  background-color: rgba(201, 32, 113, 1);
+  border-color: rgba(201, 32, 113, 1);
+}
+
+
+
+
+
+.input-checkbox-filtro[type='radio'] {
+  border-radius: 50%; /* Deixa os radios circulares */
+}
+
+
+.texto-label-filtro {
+  font-size: 14px;
+  line-height: 16px;
+}
