@@ -2,6 +2,12 @@
   height: 100%;  
   max-width: 120px;
   padding: 10px;
+  margin-top:50px;
+}
+
+.linha{
+  width:100%;
+  color:#000;
 }
 
 .select-filtro-mark {

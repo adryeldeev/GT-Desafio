@@ -4,6 +4,7 @@ import Arrow from '../../assets/Line.png';
 import { CardContainer, ImageContainer, DetailsContainer, Category, Title, Rating, Price, Description, SizeSelector, SizeOption, ColorSelector, ColorOption, BuyButton, SubTiles, ProductImageContainer, ProductImagensOptions, ProductGallery, ProductCard, ProducDiscont, ProductImage, ProductContainer, ProductHeader } from './ProductListingStyle.jsx';
 import IMGLayer from '../../assets/Layer.png';
 import IMGSnakers from '../../assets/Sneakers.png';
+import StarsIMG from '../../assets/Stars.png';
 import { NavLink, useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -176,7 +177,7 @@ const productsData = [
 
   return (
     <>
-      <div className="lista-Navegacao" style={{display:'flex' }}>
+      <div className="lista-Navegacao" style={{display:'flex', marginRight:'675px', marginTop:'20px'}}>
         <NavLink to="/" style={{textDecoration:'none', color:'#000'}}>Home </NavLink>/
         <NavLink to={`/categorias/${productData.brand}`}  style={{textDecoration:'none',  color:'#ccc'}} >{productData.brand}</NavLink>/
         <NavLink to={`/produto/${productData.id}`}  style={{textDecoration:'none',color:'#ccc'}}>{productData.title}</NavLink>/
@@ -206,7 +207,7 @@ const productsData = [
       <DetailsContainer>
         <Category>Casual | {productData.brand}</Category>
         <Title>{productData.title}</Title>
-        <Rating>⭐ 4.7 (90 avaliações)</Rating>
+        <Rating> <img src={StarsIMG} /> (90 avaliações)</Rating>
         <Price>
           R$ {productData.preco},00 <span>{productData.desconto},90</span>
         </Price>
