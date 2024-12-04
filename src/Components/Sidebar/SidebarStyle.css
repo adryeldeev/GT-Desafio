@@ -1,31 +1,62 @@
 .sidebar {
-  height: 100%;
-  width: 330px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  height: 100%;  
+  max-width: 120px;
+  padding: 10px;
+  margin-top:50px;
+}
+
+.linha{
+  width:100%;
+  color:#000;
 }
 
 .select-filtro-mark {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.barra {
+  border-top: 1px solid #ccc;
+  width: 100%;
 }
 
 .contener-categoria-filtro {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
-.titulo-filtro {
-  color: rgba(71, 71, 71, 1);
-  font-size: 15px;
+.label-filtro {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.titulo-h4-filtro {
-  color: rgba(71, 71, 71, 1);
-  margin-bottom: 7px;
+input[type='checkbox']{
+  margin-right:2px;
+}
+
+
+.input-checkbox-filtro[type='radio'] {
+  border-radius: 50%; /* Deixa os radios circulares */
+}
+
+
+.input-checkbox-filtro:checked {
+  background-color: rgba(201, 32, 113, 1);
+  border-color: rgba(201, 32, 113, 1);
+}
+
+
+
+
+
+.input-checkbox-filtro[type='radio'] {
+  border-radius: 50%; /* Deixa os radios circulares */
+}
+
+
+.texto-label-filtro {
   font-size: 14px;
+  line-height: 16px;
 }
