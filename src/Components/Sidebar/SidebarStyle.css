@@ -1,62 +1,31 @@
 .sidebar {
-  height: 100%;  
-  max-width: 120px;
-  padding: 10px;
-  margin-top:50px;
-}
-
-.linha{
-  width:100%;
-  color:#000;
+  height: 100%;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .select-filtro-mark {
   display: flex;
   flex-direction: column;
-}
-
-.barra {
-  border-top: 1px solid #ccc;
-  width: 100%;
+  gap: 20px;
 }
 
 .contener-categoria-filtro {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
-.label-filtro {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+.titulo-filtro {
+  color: rgba(71, 71, 71, 1);
+  font-size: 15px;
 }
 
-input[type='checkbox']{
-  margin-right:2px;
-}
-
-
-.input-checkbox-filtro[type='radio'] {
-  border-radius: 50%; /* Deixa os radios circulares */
-}
-
-
-.input-checkbox-filtro:checked {
-  background-color: rgba(201, 32, 113, 1);
-  border-color: rgba(201, 32, 113, 1);
-}
-
-
-
-
-
-.input-checkbox-filtro[type='radio'] {
-  border-radius: 50%; /* Deixa os radios circulares */
-}
-
-
-.texto-label-filtro {
+.titulo-h4-filtro {
+  color: rgba(71, 71, 71, 1);
+  margin-bottom: 7px;
   font-size: 14px;
-  line-height: 16px;
 }

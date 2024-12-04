@@ -104,6 +104,25 @@ const ProductCard = () => {
   }
   
   return (
+    <>
+    <div className="Content-results">
+      <div className="Content-opcoes">
+      <h4>
+        <b>
+        Resultados para "Tênis" -
+        </b>
+         <span style={{color:'rgba(71, 71, 71, 1)', marginLeft:'10px'}}>
+          390 produtos
+          </span>
+        </h4>
+        <select  id="dropdown" style={{width:'25%', heigth:'100px', border:'1px solid', padding:'10px', outline:'none'}}>
+          <option value="ordernarPor">Ordernar por : <span style={{color:'rgba(71, 71, 71, 1)'}}>mais relevantes</span></option>
+          <option value="opcao1">Opção 1</option>
+          <option value="opcao2">Opção 2</option>
+          <option value="opcao3">Opção 3</option>
+        </select>
+      </div>
+    </div>
     <div className="container-produto"  style={{ display: "flex"}}>
       <Sidebar onFilterChange={handleBrandFilter} />
       <div className="product-gallery" style={{maxWidth:'900px'}}>
@@ -127,6 +146,7 @@ const ProductCard = () => {
           ))}
         </div>
     </div>
+          </>
   );
 };
 
